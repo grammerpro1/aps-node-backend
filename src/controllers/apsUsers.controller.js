@@ -55,10 +55,7 @@ export async function getApsUsersLogin(req, res) {
 
 export async function consultaMpUsuario(req, res) {
   try {
-    // console.log(req.query.idUsuario);
-    // res.json({ chota: "chota" });
     const { xml, soapAction } = consultaMpUsuarioData(req.query.idUsuario);
-    // res.json({ xml });
     await axios
       .post("http://18.223.33.17:89/Operaciones.svc", xml, {
         headers: {
